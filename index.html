@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="style.css" rel="stylesheet" />
+        <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+        <title>Document</title>
+    </head>
+
+    <body>
+        <header class="head">
+            <div class="titleHeader">Учет кадров</div>
+        </header>
+        <div class="mainContainer">
+            <form id="inputForm" name="inputForm" action="" class="form">
+                Фамилия: <br />
+                <input
+                    id="firstname"
+                    name="firstname"
+                    type="text"
+                    placeholder="Фамилия"
+                    required
+                    autocomplete="off"
+                />
+                <br /><br />
+                Имя: <br />
+                <input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    placeholder="Имя"
+                    autocomplete="off"
+                />
+                <br /><br />
+                Должность: <br />
+                <input
+                    id="dolznost"
+                    name="dolznost"
+                    type="text"
+                    placeholder="Должность"
+                    autocomplete="off"
+                />
+                <br /><br />
+                Адрес: <br />
+                <input
+                    id="adress"
+                    name="adress"
+                    type="text"
+                    placeholder="Адрес"
+                    autocomplete="off"
+                />
+                <br /><br />
+                Почта: <br />
+                <input
+                    id="pochta"
+                    name="pochta"
+                    type="text"
+                    placeholder="Почта"
+                    autocomplete="off"
+                />
+                <br /><br />
+                Телефон: <br />
+                <input
+                    id="telephone"
+                    name="telephone"
+                    type="number"
+                    placeholder="Телефон"
+                    autocomplete="off"
+                />
+                <br /><br />
+                Дата рождения: <br />
+                <input
+                    id="birthday"
+                    name="birthday"
+                    type="date"
+                    placeholder="Дата рождения"
+                    autocomplete="off"
+                />
+                <br /><br />
+                Медосмотр: <br />
+                <input
+                    id="med"
+                    name="med"
+                    type="text"
+                    placeholder="Медосмотр"
+                    autocomplete="off"
+                />
+                <br /><br />
+                <div class="groupBtn">
+                    <input
+                        id="submitBtn"
+                        type="submit"
+                        name="add"
+                        value="Добавить"
+                    />
+                    <input id="resetForm" type="reset" name="resetValForm" value="Сбросить" />
+                </div>
+                <input
+                    class="btnCancelChange"
+                    id="btnCancelChange"
+                    type="button"
+                    value="Отменить изменение"
+                    disabled
+                />
+            </form>
+
+            <div class="table">
+                <div class="searchInputGroup">
+                    Поиск по фамилии: <br />
+                    <input
+                        id="searchfirstname"
+                        type="text"
+                        placeholder="Поиск"
+                    />
+                    <div class="leftMargin5"></div>
+                    <input
+                        id="resetfirstname"
+                        type="submit"
+                        name="resetfirstname"
+                        value="Сбросить"
+                    />
+                    <div class="leftMargin70"></div>
+                    Поиск по должности: <br />
+                    <input id="searchdolznost" type="text" placeholder="Поиск" />
+                    <div class="leftMargin5"></div>
+                    <input
+                        id="resetdolznost"
+                        type="submit"
+                        name="resetdolznost"
+                        value="Сбросить"
+                    />
+                </div>
+                <table border="2">
+                    <thead>
+                        <tr>
+                            <th class="incrWidthTd">Фамилия</th>
+                            <th class="incrWidthTd">Имя</th>
+                            <th>Должность</th>
+                            <th>Адрес</th>
+                            <th>Почта</th>
+                            <th>Телефон</th>
+                            <th>Дата рождения</th>
+                            <th>Медосмотр</th>
+                            <th>Удаление</th>
+                            <th>Изменение</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+        <div id="app"></div>
+        <script src="script.js"></script>
+        <script src="main.js"></script>
+        <script src="vue.js"></script>
+    </body>
+</html>
